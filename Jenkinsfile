@@ -31,13 +31,14 @@ pipeline {
 			parallel {
 				stage('Deploy to staging') {
 					steps {
-						sh "scp -i $homepath/ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+						/* on pc-machine use setx: setx homepath_linux "/users/username"*/
+						sh "scp -i $homepath_linux/ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
 					}
 				}
 				
 				stage('Deploy to production') {
 					steps {
-						sh "scp -i $homepath/ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+						sh "scp -i $homepath_linux/ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
 					}
 				}
 			}
