@@ -28,6 +28,38 @@
       <url>file:///tmp/maven-project-site</url>
     </site>
   </distributionManagement>
+  
+	<reporting>
+		<plugin>
+		  <artifactId>maven-checkstyle-plugin</artifactId>
+		</plugin>
+
+		<plugin>
+		  <artifactId>maven-jxr-plugin</artifactId>
+		</plugin>
+
+		<plugin>
+		  <artifactId>maven-javadoc-plugin</artifactId>
+		</plugin>
+
+		<plugin>
+		  <artifactId>maven-pmd-plugin</artifactId>
+		</plugin>
+
+		<plugin>
+		  <artifactId>maven-surefire-report-plugin</artifactId>
+		</plugin>
+
+		<plugin>
+		  <groupId>org.codehaus.mojo</groupId>
+		  <artifactId>findbugs-maven-plugin</artifactId>
+		</plugin>
+
+		<plugin>
+		  <groupId>org.codehaus.mojo</groupId>
+		  <artifactId>taglist-maven-plugin</artifactId>
+		</plugin>
+	</reporting>
 
   <build>
     <plugins>
@@ -53,40 +85,6 @@
         </configuration>
       </plugin>
     </plugins>
-	
-	<reporting>
-		<reportPlugins>
-			<plugin>
-			  <artifactId>maven-checkstyle-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-			  <artifactId>maven-jxr-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-			  <artifactId>maven-javadoc-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-			  <artifactId>maven-pmd-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-			  <artifactId>maven-surefire-report-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-			  <groupId>org.codehaus.mojo</groupId>
-			  <artifactId>findbugs-maven-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-			  <groupId>org.codehaus.mojo</groupId>
-			  <artifactId>taglist-maven-plugin</artifactId>
-			</plugin>
-		</reportPlugins>
-	</reporting>
 
     <pluginManagement>
       <plugins>
