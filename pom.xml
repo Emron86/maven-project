@@ -30,34 +30,36 @@
   </distributionManagement>
   
 	<reporting>
-		<plugin>
-		  <artifactId>maven-checkstyle-plugin</artifactId>
-		</plugin>
+		<plugins>
+			<plugin>
+			  <artifactId>maven-checkstyle-plugin</artifactId>
+			</plugin>
 
-		<plugin>
-		  <artifactId>maven-jxr-plugin</artifactId>
-		</plugin>
+			<plugin>
+			  <artifactId>maven-jxr-plugin</artifactId>
+			</plugin>
 
-		<plugin>
-		  <artifactId>maven-javadoc-plugin</artifactId>
-		</plugin>
+			<plugin>
+			  <artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>
 
-		<plugin>
-		  <artifactId>maven-pmd-plugin</artifactId>
-		</plugin>
+			<plugin>
+			  <artifactId>maven-pmd-plugin</artifactId>
+			</plugin>
 
-		<plugin>
-		  <artifactId>maven-surefire-report-plugin</artifactId>
-		</plugin>
+			<plugin>
+			  <artifactId>maven-surefire-report-plugin</artifactId>
+			</plugin>
 
-		<plugin>
-		  <groupId>org.codehaus.mojo</groupId>
-		  <artifactId>findbugs-maven-plugin</artifactId>
-		</plugin>
+			<plugin>
+			  <groupId>org.codehaus.mojo</groupId>
+			  <artifactId>findbugs-maven-plugin</artifactId>
+			</plugin>
 
-		<plugin>
-		  <groupId>org.codehaus.mojo</groupId>
-		  <artifactId>taglist-maven-plugin</artifactId>
+			<plugin>
+			  <groupId>org.codehaus.mojo</groupId>
+			  <artifactId>taglist-maven-plugin</artifactId>
+			</plugin>
 		</plugin>
 	</reporting>
 
