@@ -34,13 +34,13 @@ pipeline {
 						/* on pc-machine use setx: setx -m homepath_linux "c:/users/username"*/
 						/* need to set permissions in virtual machine for ec2-user to get permission to group tomcat and related folders
 						sudo usermod -a -G tomcat ec2-user */
-						sh "scp -i $homepath_linux/ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+						sh "scp -i $homepath_linux/.ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
 					}
 				}
 				
 				stage('Deploy to production') {
 					steps {
-						sh "scp -i $homepath_linux/ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+						sh "scp -i $homepath_linux/.ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
 					}
 				}
 			}
