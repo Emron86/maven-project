@@ -5,6 +5,11 @@ pipeline {
 		maven 'localMaven'
 	}
 	
+	environment {
+		HOMEPATH = 'Users/emil.vahlstrom'
+		HOMEDRIVE = 'C:'
+	}
+	
 	parameters {
 		string(name: 'tomcat_dev', defaultValue: '18.222.225.114', description: 'Staging Server')
 		string(name: 'tomcat_prod', defaultValue: '18.222.221.77', description: 'Production Server')
