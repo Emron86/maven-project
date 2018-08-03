@@ -35,7 +35,7 @@ pipeline {
             }
         }
 		
-		stage('Deployments') {
+		stage('Deployments/Analyze') {
 			parallel {
 				stage('Deploy to staging') {
 					steps {
@@ -49,6 +49,12 @@ pipeline {
 				stage('Deploy to production') {
 					steps {
 						sh "scp -i $homepath_linux/.ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+					}
+				}
+				
+				stage('Checkstyle') {
+					steps {
+						build job 'static analysis'
 					}
 				}
 			}
