@@ -54,7 +54,7 @@ pipeline {
 				
 				stage('Checkstyle') {
 					steps {
-						build job 'static analysis'
+						build job: 'static analysis'
 					}
 				}
 			}
