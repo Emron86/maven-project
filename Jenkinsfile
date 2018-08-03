@@ -14,7 +14,7 @@ pipeline {
 	parameters {
 		string(name: 'tomcat_dev', defaultValue: '18.222.225.114', description: 'Staging Server')
 		string(name: 'tomcat_prod', defaultValue: '18.222.221.77', description: 'Production Server')
-		string(name: 'HOMEPATH', defaultValue: '', description: 'Homepath (e.g. users/username)')
+		string(name: 'HOMEPATH', defaultValue: '${env.devuser}', description: 'Homepath (e.g. users/username)')
 		string(name: 'HOMEDRIVE', defaultValue: 'C:', description: 'Home drive, e.g. C:')
 	}
 	
