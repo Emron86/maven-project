@@ -31,6 +31,10 @@ pipeline {
                 success {
                     echo 'Now Archiving...'
                     archiveArtifacts artifacts: '**/target/*.war'
+					echo env.devuser
+					echo ${env.devuser}
+					echo ${env.HOMEPATH_DEV}
+					echo env.HOMEPATH_DEV
                 }
             }
         }
